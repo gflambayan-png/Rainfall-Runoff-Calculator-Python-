@@ -44,7 +44,7 @@ plt.show()
 
 # How to Run:
 ```
-pip install numpy matplotlib
+python -m pip install numpy matplotlib
 python runoff.py
 python plot_runoff.py
 ```
@@ -57,7 +57,7 @@ python plot_runoff.py
 
 │── plot_runoff.py   # Visualization script
 
-│── example.png      # Optional plot image
+│── Example-Plot.png      # Optional plot image
 
 # What I learned:
 - Applying hydrology formulas into Python

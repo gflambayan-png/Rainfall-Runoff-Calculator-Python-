@@ -48,6 +48,17 @@ pip install numpy matplotlib
 python runoff.py
 python plot_runoff.py
 ```
+# Project Structure:
+📁 rainfall-runoff-calculator
+
+│── README.md        # Project documentation
+
+│── runoff.py        # Main SCS runoff calculator
+
+│── plot_runoff.py   # Visualization script
+
+│── example.png      # Optional plot image
+
 # What I learned:
 - Applying hydrology formulas into Python
 - Visualizing engineering data

@@ -1,17 +1,57 @@
-# Rainfall-Runoff-Calculator-Python-
-Project Overview:
+# Rainfall-Runoff-Calculator (Python)
+# Project Overview:
 This script calculates runoff depth based on rainfall input and a selected Curve Number. It also includes an optional visualization that illustrates the rainfall–runoff relationship commonly used in stormwater management and drainage design.
 
-Features:
+# Featured:
+- Runoff estimation using SCS CN formula
+- Accepts any rainfall depth (mm)
+- Clean, reusable calculation function
+- Optional Rainfall-Runoff Plot
+- Easy to extend into larger hydrology analysis tool
 
+# Core Function:
+```
+def scs_runoff(P, CN):
 
--Runoff estimation using the SCS CN Formula
+S=(25400 / CN)-254
 
--Accepts any rainfall depth(mm)
+Ia=0.2 * S
 
--Clean, reusable calculation function
+if P<= Ia:
+ 
+  return 0
 
--Optional Rainfall-Runoff plot
+return ((P - Ia)**2) / (P - Ia + S)
+```
+# Example Usage:
 
--Easy to extend into a larger hydrology analysis tool
+```
+runoff = scs_runoff(50,75)
+print(f"Runoff depth: {runoff:.2f} mm")
+
+```
+# Plot Snippet
+
+```
+plt.plot(rain, runoff)
+plt.xlabel("Rainfall (mm)")
+plot.ylabel("Runoff (mm)")
+plt.title("SCS Curve Number Runoff Response")
+plt.grid(True)
+plt.show()
+
+```
+
+# How to Run:
+```
+pip install numpy matplotlib
+python runoff.py
+python plot_runoff.py
+```
+# What I learned:
+- Applying hydrology formulas into Python
+- Visualizing engineering data
+- Writing clear documentation
+- Connecting Civil Engineering concepts with automation
+
 

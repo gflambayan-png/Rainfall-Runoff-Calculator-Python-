@@ -1,2 +1,10 @@
 # Rainfall-Runoff-Calculator-Python-
-Developed a Python script that calculates stormwater runoff using the SCS Curve Number method. This project helped me practice hydrology concepts, automate calculations, and visualize runoff behavior for different rainfall events.
+Project Overview:
+This script calculates runoff depth based on rainfall input and a selected Curve Number. It also includes an optional visualization that illustrates the rainfall–runoff relationship commonly used in stormwater management and drainage design.
+Features:
+-Runoff estimation using the SCS CN Formula
+-Accepts any rainfall depth(mm)
+-Clean, reusable calculation function
+-Optional Rainfall-Runoff plot
+-Easy to extend into a larger hydrology analysis tool
+

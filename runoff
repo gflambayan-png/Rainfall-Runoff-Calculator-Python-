@@ -1,0 +1,19 @@
+import numpy as np
+
+def scs_runoff(P, CN):
+    """ Calculate runoff depth (mm) using the SCS Curve Number Method."""
+    S=(25400 / CN) - 254  # Potential maximum retention after runoff begins (mm)
+    Ia=0.2 * S  # Initial abstraction (mm)
+    if P <= Ia:
+        return 0.0  # No runoff occurs
+    else:
+        Q = ((P - Ia) ** 2) / (P - Ia + S)  # Runoff depth (mm)
+        return Q
+
+# Example usage
+if __name__ == "__main__":
+    rainfall=50 # Rainfall depth in mm
+    curve_number=75 # Curve Number (CN) for the area
+    runoff=scs_runoff(rainfall, curve_number)
+    print(f"Runoff depth: {runoff:.2f} mm")
+
